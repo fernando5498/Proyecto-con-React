@@ -1,0 +1,8 @@
+@use "../../scss/1-base/variable" as var;
+.Footer-copy {
+    display: block;
+    margin: 2.5rem 0 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var.$color-gray-light;
+}

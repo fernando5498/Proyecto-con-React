@@ -1,0 +1,26 @@
+:root {
+    --color-blue: hsl(207, 90%, 61%);
+    --color-blue-light: hsl(207, 100%, 66%);
+    --color-purple: hsl(250, 66%, 75%);
+    --color-pink: hsl(356, 66%, 75%);
+    --color-teal: hsl(174, 63%, 62%);
+    --color-gray: #5a5c60;
+    --color-gray-light: #d4dada;
+    --bg-color: #fbfdff;
+}
+
+$color-blue: var(--color-blue);
+$color-purple: var(--color-purple);
+$color-pink: var(--color-pink);
+$color-teal: var(--color-teal);
+$color-gray: var(--color-gray);
+$color-gray-light: var(--color-gray-light);
+$bg-color: var(--bg-color);
+
+/* --------------------- TRANSITION --------------------- */
+
+$transition: (
+    slow: all 900ms ease-in-out,
+    medium: all 600ms ease-in-out,
+    fast: all 300ms ease-in-out,
+);

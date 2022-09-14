@@ -1,0 +1,41 @@
+@use "../../scss/1-base/variable" as var;
+
+.Projects-content {
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+}
+
+.Projects-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    &-img {
+        width: 100%;
+        height: 100%;
+    }
+    &-modal {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: -100%;
+        left: 0;
+        background: linear-gradient(180deg, #5a5c60af 0%, #020608 90%);
+        display: grid;
+        align-items: flex-end;
+        padding: 1.5rem 1.25rem;
+        transition: map-get(var.$transition, fast);
+        &-subtitle,
+        &-title {
+            color: white;
+        }
+        &-subtitle {
+            font-size: 0.7rem;
+        }
+    }
+    &:hover &-modal {
+        bottom: 0;
+    }
+}
+
+.Projects-buttons {
+    padding: 0.5rem 0.7rem;
+}

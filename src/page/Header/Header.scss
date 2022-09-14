@@ -1,0 +1,114 @@
+@use "../../scss/1-base/variable" as var;
+
+.Profile {
+    position: relative;
+    padding-top: 3.5rem;
+}
+.Profile-container {
+    row-gap: 2rem;
+}
+.Profile-data {
+    display: grid;
+    text-align: center;
+    &-border {
+        border: 3.5px solid var.$color-blue;
+        justify-self: center;
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        &-img {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(180deg, hsla(207, 90%, 61%, 0.5) 0%, var.$color-blue 100%);
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            img {
+                width: 75px;
+            }
+        }
+    }
+    &-name {
+        font-size: 1.5rem;
+    }
+    &-profession {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        color: var.$color-gray;
+    }
+}
+.Profile-social {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.75rem;
+    &-link {
+        font-size: 1.25rem;
+        color: var.$color-gray;
+        transition: all 300ms;
+        &:hover {
+            color: var.$color-blue;
+        }
+    }
+}
+
+.Profile-info {
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    column-gap: 2.5rem;
+    margin-top: 2rem;
+    &-group {
+        text-align: center;
+    }
+    &-number {
+        font-size: 1.2rem;
+        margin-bottom: 0.25rem;
+    }
+    &-description {
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+}
+
+.Profile-buttons--small,
+.Profile-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Profile-buttons {
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.Profile-buttons--small {
+    column-gap: 0.25rem;
+}
+
+#theme-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    font-size: 1.25rem;
+    color: var.$color-gray;
+    cursor: pointer;
+    transition: map-get(var.$transition, fast);
+}
+.change-theme:hover {
+    color: var.$color-blue;
+}
+
+.theme-dark {
+    --color-blue: hsl(207, 90%, 61%);
+    --color-blue-light: hsl(207, 100%, 66%);
+    --color-purple: hsl(250, 66%, 75%);
+    --color-pink: hsl(356, 66%, 75%);
+    --color-teal: hsl(174, 63%, 62%);
+    --color-gray: #ffffff;
+    --color-gray-light: #141b24;
+    --bg-color: #0a141d;
+    color: white;
+}

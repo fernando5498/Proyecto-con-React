@@ -1,0 +1,54 @@
+@use "../1-base/variable" as var;
+@use "../2-mixins/base-buttons" as btn;
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    background-color: var(--color-blue-light);
+    color: white;
+    padding: 1.15rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: map-get(var.$transition, fast);
+    box-shadow: 0 8px 24px var(--color-blue);
+    font-weight: 500;
+    i {
+        font-size: 1.25rem;
+    }
+    &:hover {
+        color: white;
+
+        background-color: var.$color-blue;
+    }
+}
+.button--small {
+    padding: 0.75rem;
+    box-shadow: none;
+}
+.button--gray {
+    background-color: var.$color-gray-light;
+    color: var.$color-gray;
+    &:hover {
+        background-color: var.$bg-color;
+        color: var.$color-gray;
+    }
+}
+.buttons-filters {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    color: var.$color-gray;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    background: transparent;
+    transition: map-get(var.$transition, fast);
+    &:hover {
+        background: var.$bg-color;
+    }
+    &.active {
+        background: var.$bg-color;
+    }
+}

@@ -1,0 +1,78 @@
+@use "variable" as var;
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+video,
+picture,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+input {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var.$color-gray-light;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: var.$color-gray;
+}
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var.$bg-color;
+}
+
+input,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    outline-width: 0;
+    outline-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline-style: none;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+}

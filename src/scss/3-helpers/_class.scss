@@ -1,0 +1,12 @@
+.u-mb-section {
+    padding-top: clamp(87px, 50px + 7vw, 140px);
+}
+
+.u-visibility-animate {
+    visibility: hidden;
+}
+
+.u-grid {
+    display: grid;
+    gap: 1.5rem;
+}
